@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kevin O's Password Generator</title>
+    <link rel="stylesheet" href="../passGen/assets/css/ko_passGen_style.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- Header -->
+        <header>
+            <h1>Kevin O's Password Generator</h1>
+        </header>
+
+        <main class="card">
+
+            <!-- Sub Head -->
+            <div class="card-header">
+                <h2>Generate a Password</h2>
+            </div>
+
+            <!-- Password returned in this area -->
+            <div class="card-body">
+                <textarea readonly id="password" placeholder="Your Secure Password"
+                    aria-label="Generated Password"></textarea>
+            </div>
+
+            <div >
+
+                <h4>After you click the button below you will be asked<br>the following 5 questions regarding your
+                    password.<br>Please respond accordingly.<br><br>Thank you!</h4>
+
+                <ol>
+                    <li>How many characters would you like your password to be?</li>
+                    <li>Would you like special characters ?</li>
+                    <li>Would you like uppercase letters ?</li>
+                    <li>Would you like lowercase letters ?</li>
+                    <li>Would you like lowercase numbers ?</li>
+                </ol>
+
+            </div>
+
+            <!-- Button -->
+            <div class="card-footer">
+                    <button id="generate" class="btn">Generate Password</button>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- JavaScript link -->
+    <script src="../passGen/assets/js/ko_passGen_script.js"></script>
+
+</body>
+
+</html>
