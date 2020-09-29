@@ -11,10 +11,22 @@ while (userInputPwLength < 8 || userInputPwLength > 128 || isNaN(userInputPwLeng
 
 alert(userInputPwLength);
 
-var userInputNumb = prompt('Want "Numbers" in your passwword?');
-var userInputUpper = prompt('Want "UPPERCASE LETTERS" in your password ?');
-var userInputLower = prompt('Want "lower case letters" in your password ?');
-var userInputSpec = prompt('Want "Special characters" in your password ?');
+var userInputNumb = confirm('Want "Numbers" in your passwword?');
+var userInputUpper = confirm('Want "UPPERCASE LETTERS" in your password ?');
+var userInputLower = confirm('Want "lower case letters" in your password ?');
+var userInputSpec = confirm('Want "Special characters" in your password ?');
+
+if (userInputNumb === true) {
+
+  alert("Yes I would like numbers");
+} else {
+  "No I would not like numbers"
+};
+
+alert(userInputNumb);
+alert(userInputUpper);
+alert(userInputLower);
+alert(userInputSpec);
 
 
 // // Assignment Code
