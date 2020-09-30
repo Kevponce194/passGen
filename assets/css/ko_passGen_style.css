@@ -36,19 +36,19 @@ header {
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
-  font-size: 18px;
+  font-size: 16px;
   margin: 0 auto;
   max-width: 800px;
-  padding: 30px 40px;
+  padding: 10px 40px 30px 40px;
 }
 
-.card-header::after {
+/* .card-header::after {
   content: " ";
   display: block;
   width: 100%;
   background: #e7e9eb;
   height: 2px;
-}
+} */
 
 .card-body {
   min-height: 100px;
@@ -134,4 +134,26 @@ button[disabled] {
   .btn {
     font-size: 0.8rem;
   }
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h2 {
+  margin: .5rem 0 .5rem 0;
+}
+
+h5 {
+  margin: 0 0 0 0;
+}
+
+li {
+  line-height: 1.5rem;
+  font-size: .9rem;
+}
+
+section {
+  background-color: blanchedalmond;
+  padding: 1rem;
 }

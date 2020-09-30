@@ -10,7 +10,6 @@
 <body>
 
     <script type="text/javascript">
-
         // declare and initialize the arrays
         var numBersArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
         var uppCaseArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
@@ -48,11 +47,17 @@
         // tells user their password length -------------------
         alert("Your password will be " + userInputPwLength);
 
+        var userInputNumb = false, userInputUpper = false, userInputLower = false, userInputSpec = false;
+
         // prompt for which character sets are used ------------------------------
-        var userInputNumb = confirm('Want "Numbers" in your passwword?');
-        var userInputUpper = confirm('Want "UPPERCASE LETTERS" in your password ?');
-        var userInputLower = confirm('Want "lower case letters" in your password ?');
-        var userInputSpec = confirm('Want "Special characters" in your password ?');
+        while ((userInputNumb === false) && (userInputUpper === false) && (userInputLower === false) && (
+                userInputSpec === false)) {
+            alert("You must pick at least 1 of the following categories");
+            userInputNumb = confirm('Want "Numbers" in your passwword?');
+            userInputUpper = confirm('Want "UPPERCASE LETTERS" in your password ?');
+            userInputLower = confirm('Want "lower case letters" in your password ?');
+            userInputSpec = confirm('Want "Special characters" in your password ?');
+        };
 
         // push a new key.value pair of combined character sets to pwData.comboArray ------------------------------
         if (userInputNumb == true) {
