@@ -140,17 +140,18 @@ button[disabled] {
   }
 }
 
-/* h1 {
-  margin-bottom: 0;
+h1 {font-size:2rem;} /*1rem = 16px*/
+
+@media (min-width: 544px) {  
+  h1 {font-size:3rem;} /*1rem = 16px*/
 }
 
-h2 {
-  margin: .5rem 0 .5rem 0;
+h2 {font-size:1.5rem;} /*1rem = 16px*/
+
+@media (min-width: 544px) {  
+  h2 {font-size:2rem;} /*1rem = 16px*/
 }
 
-h5 {
-  margin: 0 0 0 0;
-} */
 
 li {
   line-height: 1.5rem;
