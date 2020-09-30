@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+* {
+  outline: solid 1px red;
+}
+
 html,
 body,
 .wrapper {
@@ -58,13 +62,13 @@ header {
   text-align: center;
 }
 
-.card-footer::before {
+/* .card-footer::before {
   content: " ";
   display: block;
   width: 100%;
   background: #e7e9eb;
   height: 2px;
-}
+} */
 
 .card-footer::after {
   content: " ";
