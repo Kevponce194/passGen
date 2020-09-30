@@ -17,7 +17,7 @@ body,
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #f9fbfd;
 }
 
@@ -70,11 +70,11 @@ header {
   height: 2px;
 } */
 
-.card-footer::after {
+/* .card-footer::after {
   content: " ";
   display: block;
   clear: both;
-}
+} */
 
 .btn {
   border: none;
@@ -140,7 +140,7 @@ button[disabled] {
   }
 }
 
-h1 {
+/* h1 {
   margin-bottom: 0;
 }
 
@@ -150,7 +150,7 @@ h2 {
 
 h5 {
   margin: 0 0 0 0;
-}
+} */
 
 li {
   line-height: 1.5rem;
