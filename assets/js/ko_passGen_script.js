@@ -7,7 +7,7 @@ var uppCaseArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M
 var lowCaseArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
   't', 'u', 'v', 'w', 'x', 'y', 'z'
 ];
-var specCharArr = ['!', '#', '$', '%', '&', '*', '?', '@', '[', '^', '{', '}', '~'];
+var specCharArr = ['!', '#', '$', '%', '&', '*', '@', '[', '^', '{', '}', '~'];
 
 function generatePassword() {
   // declare the object. it will be populated by a push from if statements below where
