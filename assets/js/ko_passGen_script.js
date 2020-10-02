@@ -1,5 +1,6 @@
 // declare and initialize the arrays
 var numBersArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
 var uppCaseArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
   'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 ];
@@ -9,17 +10,11 @@ var lowCaseArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm
 var specCharArr = ['!', '#', '$', '%', '&', '*', '?', '@', '[', '^', '{', '}', '~'];
 
 function generatePassword() {
-  // declare the object. it will be populated by a push from if statement below where
-  // the if statemnets concatenate the 4 arrays together into 
-  // couldn't this just be nested arrays without the object?  I tried some other stuff which 
-  // is now commented out.
+  // declare the object. it will be populated by a push from if statements below where
+  // the if statements concatenate the 4 arrays together.
+  // Looked this up and found they are essentially nested arrays
   var pwData = {
     comboArray: [],
-    //     pwLengthKey: userInputPwLength,
-    //     numBersKey: [],
-    //     uppCaseKey: [],
-    //     lowCaseKey: [],
-    //     specCharKey: [],
   };
 
   // verify that the password length is correct -------------------
@@ -33,7 +28,6 @@ function generatePassword() {
     var userInputPwLength = parseInt(prompt("Pick a password length of 8 to 128 characters"));
   };
 
-  // tells user their password length -------------------
   // alert("Your password will be " + userInputPwLength + " characters");  // for debugging
 
   // prompt for which character sets are used
@@ -66,18 +60,11 @@ function generatePassword() {
     pwData.comboArray.push(specCharArr);
   };
 
-  // begin loop to concatenate string____(not sure if an if or while should be used, need to clarify____
+  // begin loop to concatenate string__
   let x = 0;
 
   var passwordString = "";
 
-  // for (let x = 0; x < userInputPwLength; x ++) {
-  //     var indexA = Math.floor(Math.random() * (pwData.comboArray.length));
-  //     var indexB = Math.floor(Math.random() * (pwData.comboArray[indexA].length - 1));
-  //     var passwordString = passwordString + pwData.comboArray[indexA][indexB];
-  //     console.log("------------------------")
-  //     console.log(pwData.comboArray[indexA][indexB]);
-  // };
   while (x < userInputPwLength) {
     // 1st Math.Random returns a random number from the number of Character sets requested by user
     // which is found by looking at how many arrays are pushed(nested) to comboArray
@@ -85,17 +72,17 @@ function generatePassword() {
     // 2nd Math.Random returns a random number index of the nested array found from the first random number
     var indexB = Math.floor(Math.random() * (pwData.comboArray[indexA].length - 1));
     var passwordString = passwordString + pwData.comboArray[indexA][indexB];
-    console.log("------------------------")
-    console.log(pwData.comboArray[indexA][indexB]);
+    //console.log("------------------------") // for debugging
+    //console.log(pwData.comboArray[indexA][indexB]); // for debugging
     x++
   };
-  console.log("------------------------");
-  console.log(passwordString);
-  // alert("Your password is " + passwordString);
+  //console.log("------------------------"); // for debugging
+  //console.log(passwordString);  // for debugging
+  // alert("Your password is " + passwordString); // for debugging
   return passwordString;
 };
 
-// _________________________________________________________
+// ____________Provided code below__________________________
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -106,7 +93,27 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+  scrollToTop();
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // copyToPasteboard();
+};
+
+// //   -  Tried to add a function to copy to the pasteboard but could not figure it out.
+// function copyToPasteboard() {
+//   var askIfCopy = confirm('Want to copy your password to the clipboard?');
+//   if (askIfCopy) {
+//     navigator.clipboard.writeText(password.value)
+//       .then(function () {
+//         alert("Text copied to clipboard successfully");
+//       })
+//       .catch(function () {
+//         alert("An error occurred copying the text to the clipboard.");
+//       });
+//   };
+// }
