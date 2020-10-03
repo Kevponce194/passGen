@@ -3,7 +3,7 @@
 *::after {
   box-sizing: border-box;
 }
-
+/* for debugging only */
 /* * {
   outline: solid 1px red;
 } */
@@ -21,11 +21,11 @@ body {
   background-color: #f9fbfd;
 }
 
-.wrapper {
-  /* padding-top: 30px; */
-  /* padding-left: 20px;
-  padding-right: 20px; */
-}
+/* .wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+} */
 
 header {
   text-align: center;
@@ -43,20 +43,11 @@ header {
   font-size: 16px;
   margin: 0 auto;
   max-width: 800px;
-  /* padding: 10px 40px 30px 40px; */
 }
 
 .card-header {
   border-bottom: 1px solid rgba(0,0,0);
 }
-
-/* .card-header::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-} */
 
 .card-body {
   min-height: 100px;
@@ -65,20 +56,6 @@ header {
 .card-footer {
   text-align: center;
 }
-
-/* .card-footer::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-} */
-
-/* .card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
-} */
 
 .btn {
   border: none;
@@ -146,19 +123,19 @@ button[disabled] {
 
 h1 {font-size:2rem;
   margin-bottom: 0;
-} /*1rem = 16px*/
+} 
 
 @media (min-width: 544px) {  
   h1 {font-size:3rem;
-    margin-bottom: 0;} /*1rem = 16px*/
+    margin-bottom: 0;} 
 }
 
 h2 {font-size:1.5rem;
-  margin-bottom: 0;} /*1rem = 16px*/
+  margin-bottom: 0;} 
 
 @media (min-width: 544px) {  
   h2 {font-size:2rem;
-  margin-bottom: 0;} /*1rem = 16px*/
+  margin-bottom: 0;} 
 }
 
 

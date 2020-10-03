@@ -99,21 +99,8 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// add function to scroll app to top for mobile phones
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
-  // copyToPasteboard();
 };
 
-// //   -  Tried to add a function to copy to the pasteboard but could not figure it out.
-// function copyToPasteboard() {
-//   var askIfCopy = confirm('Want to copy your password to the clipboard?');
-//   if (askIfCopy) {
-//     navigator.clipboard.writeText(password.value)
-//       .then(function () {
-//         alert("Text copied to clipboard successfully");
-//       })
-//       .catch(function () {
-//         alert("An error occurred copying the text to the clipboard.");
-//       });
-//   };
-// }
